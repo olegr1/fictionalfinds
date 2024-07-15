@@ -73,15 +73,29 @@ li {
 .prod-tile {
   position: relative;
   border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
 }
 
 .prod-tile-link {
   display: block;
   padding: 15px 15px 75px;
+  text-decoration: none;
+  color: unset;
 }
 
 .prod-tile-link * {
   text-decoration: none;
+}
+
+.prod-tile-link {
+  display: block;
+  padding: 15px 15px 75px;
+  text-decoration: none;
+  color: unset;
+}
+
+.prod-tile-link:hover .prod-title {
+  text-decoration: underline;
 }
 
 .prod-rating {
@@ -113,6 +127,10 @@ li {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
+  }
+
+  .prod-tile {
+    margin-bottom: 0;
   }
 }
 

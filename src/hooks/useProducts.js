@@ -14,7 +14,5 @@ export function useProducts(itemsPerPage = 20, currentPage = 0) {
         .then((res) => res.data),
   });
 
-  console.log(data);
-
   return { data, error, isLoading };
 }

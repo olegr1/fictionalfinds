@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useProducts } from "../hooks/useProducts";
 import PaginationFilters from "./PaginationFilters";
-import ProductTile from "./ProductTile";
+import ProductGrid from "./ProductGrid";
+import ProductFilters from "./ProductFilters";
 
 function Products() {
   const [itemsPerPage, setItemsPerPage] = useState(20);
@@ -30,12 +31,8 @@ function Products() {
           />
 
           <div className="prod-panes">
-            <div className="prod-filters">Filters</div>
-            <ul className="prod-grid">
-              {data.products.map((product) => (
-                <ProductTile product={product} key={product.id} />
-              ))}
-            </ul>
+            <ProductFilters />
+            <ProductGrid products={data.products} />
           </div>
         </div>
       </div>

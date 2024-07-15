@@ -13,12 +13,12 @@ function ProductTile({ product }) {
             alt={product.title}
           />
         </div>
-        <h3>{product.title}</h3>
+        <h3 className="prod-title">{product.title}</h3>
         <div className="prod-price">{product.price}</div>
 
         <div className="prod-rating">
-          {[...Array(Math.floor(roundedRating))].map((star) => (
-            <Icon name={"star"} />
+          {[...Array(Math.floor(roundedRating))].map((star, index) => (
+            <Icon key={index} name={"star"} />
           ))}
           {!Number.isInteger(roundedRating) && <Icon name={"star-half"} />}
           <span>{roundedRating}</span>
