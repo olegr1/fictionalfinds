@@ -1,9 +1,11 @@
 import { useSearchParams } from "react-router-dom";
+import config from "../config.json";
 
 function PaginationFilters({ data }) {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const itemsPerPage = searchParams.get("itemsPerPage") || 20;
+  const itemsPerPage =
+    searchParams.get("itemsPerPage") || config.PRODUCTS_PER_PAGE;
   const currentPage = searchParams.get("currentPage") || 1;
 
   const pagesCount = Math.ceil(data.total / itemsPerPage);

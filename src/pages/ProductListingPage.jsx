@@ -1,10 +1,12 @@
-import { useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { useProductListing } from "../hooks/useProductListing";
 import PaginationFilters from "../components/PaginationFilters";
 import ProductFilters from "../components/ProductFilters";
 import ProductTile from "../components/ProductTile";
 
 function ProductListingPage() {
+  const { category } = useParams();
+
   const [searchParams, setSearchParams] = useSearchParams();
 
   const itemsPerPage = searchParams.get("itemsPerPage") || 20;
@@ -12,7 +14,8 @@ function ProductListingPage() {
 
   const { data, error, isLoading } = useProductListing(
     itemsPerPage,
-    currentPage
+    currentPage,
+    category
   );
 
   if (isLoading) {

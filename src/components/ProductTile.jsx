@@ -6,7 +6,10 @@ function ProductTile({ product }) {
 
   return (
     <li className="product-tile">
-      <Link to={product.id.toString()} className="product-tile-link">
+      <Link
+        to={"../products/" + product.id.toString()}
+        className="product-tile-link"
+      >
         <div className="product-tile-img-wrap">
           <img
             className="product-tile-img"

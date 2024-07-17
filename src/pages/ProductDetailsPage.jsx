@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useProductDetails } from "../hooks/useProductDetails";
 
 function ProductDetailsPage() {
@@ -19,6 +19,7 @@ function ProductDetailsPage() {
       <div className="container">
         <div className="product-details-content">
           <div className="product-details-img-wrap">
+            <Link to={`/products/category/${data.category}`}>{"<< Back"}</Link>
             <img
               className="product-details-img"
               src={data.images[0]}

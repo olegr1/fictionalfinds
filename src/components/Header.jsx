@@ -10,9 +10,9 @@ function Header() {
               <li>
                 <Link to="/">Home</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/products">Products</Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>

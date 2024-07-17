@@ -27,7 +27,10 @@ function App() {
     createRoutesFromElements(
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/products" element={<ProductListingPage />} />
+        <Route
+          path="/products/category/:category"
+          element={<ProductListingPage />}
+        />
         <Route path="/products/:id" element={<ProductDetailsPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
