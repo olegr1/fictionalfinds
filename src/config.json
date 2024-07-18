@@ -1,4 +1,14 @@
 {
   "API_BASE_URL": "https://dummyjson.com",
-  "PRODUCTS_PER_PAGE": "20"
+  "PRODUCTS_PER_PAGE_OPTIONS": [3, 8, 12],
+  "PRODUCTS_PER_PAGE": 3,
+  "PRODUCT_CATEGORIES": [
+    "kitchen-accessories",
+    "sports-accessories",
+    "laptops",
+    "skin-care",
+    "tablets",
+    "motorcycle",
+    "home-decoration"
+  ]
 }

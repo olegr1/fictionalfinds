@@ -3,13 +3,15 @@ import { useProductListing } from "../hooks/useProductListing";
 import PaginationFilters from "../components/PaginationFilters";
 import ProductFilters from "../components/ProductFilters";
 import ProductTile from "../components/ProductTile";
+import config from "../config.json";
 
 function ProductListingPage() {
   const { category } = useParams();
 
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const itemsPerPage = searchParams.get("itemsPerPage") || 20;
+  const itemsPerPage =
+    searchParams.get("itemsPerPage") || config.PRODUCTS_PER_PAGE;
   const currentPage = searchParams.get("currentPage") || 1;
 
   const { data, error, isLoading } = useProductListing(
@@ -30,10 +32,10 @@ function ProductListingPage() {
     <div className="product-listing">
       <div className="container">
         <div className="product-listing-content">
-          <PaginationFilters data={data} />
+          <PaginationFilters data={data} category={category} />
 
           <div className="product-panes">
-            <ProductFilters />
+            {/* <ProductFilters /> */}
             <ul className="product-grid">
               {data.products.map((product) => (
                 <ProductTile product={product} key={product.id} />

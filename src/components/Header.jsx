@@ -2,19 +2,15 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <div className="container">
         <div className="header-content">
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              {/* <li>
-                <Link to="/products">Products</Link>
-              </li> */}
-            </ul>
-          </nav>
+          <Link to="/" className="app-logo-link">
+            <svg focusable="false" tabIndex="-1" aria-hidden="true">
+              <use focusable="false" tabIndex="-1" xlinkHref="#logo"></use>
+            </svg>
+            <span className="sr-only">Fictional Finds home page</span>
+          </Link>
         </div>
       </div>
     </header>

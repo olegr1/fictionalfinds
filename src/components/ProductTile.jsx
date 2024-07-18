@@ -25,7 +25,7 @@ function ProductTile({ product }) {
             <Icon key={index} name={"star"} />
           ))}
           {!Number.isInteger(roundedRating) && <Icon name={"star-half"} />}
-          <span>{roundedRating}</span>
+          <div className="product-tile-rating-num">{roundedRating}</div>
         </div>
       </Link>
 
