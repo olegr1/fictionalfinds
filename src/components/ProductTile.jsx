@@ -18,15 +18,14 @@ function ProductTile({ product }) {
           />
         </div>
         <h3 className="product-tile-title">{product.title}</h3>
-        <div className="product-tile-price">{product.price}</div>
-
         <div className="product-tile-rating">
           {[...Array(Math.floor(roundedRating))].map((star, index) => (
             <Icon key={index} name={"star"} />
           ))}
           {!Number.isInteger(roundedRating) && <Icon name={"star-half"} />}
-          <div className="product-tile-rating-num">{roundedRating}</div>
         </div>
+
+        <div className="product-tile-price">${product.price}</div>
       </Link>
 
       <button className="product-tile-cta" type="button">

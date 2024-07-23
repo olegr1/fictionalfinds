@@ -1,13 +1,12 @@
 # About this demo (WORK IN PROGRESS!)
 
-I’m building a fictional online store using a public dummy REST API from [https://dummyjson.com/docs/products](https://dummyjson.com/docs/products) whenever I have free time.
+For practice sake I’m building a fictional online store in React using a public dummy REST API from [https://dummyjson.com/docs/products](https://dummyjson.com/docs/products) whenever I have free time.
 
-### Some of its features I want to implement (none are complete at the moment):
+### Some of its features I want to implement:
 
 - Responsive mobile-first layout
 - Custom CSS
-- Screen reader friendly
-- Fully accessible
+- Accessibility features
 - Requests handled by TanStack Query (React Query)
 - Routing handled by React Router
 - State management via URL parameters

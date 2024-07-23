@@ -6,7 +6,7 @@ function Loading({ text }) {
       <div className="container">
         <div className="loading-content">
           <div className="loading-icon-wrap">
-            <Icon name={"hourglass"} />
+            <Icon name={"progress"} />
           </div>
           <p className="loading-text">{text}</p>
         </div>

@@ -5,8 +5,11 @@ import Footer from "./Footer";
 function Layout() {
   return (
     <>
+      <a href="#main" className="skip-to-main-link">
+        Skip to main content
+      </a>
       <Header />
-      <main className="main">
+      <main id="main" className="main">
         <Outlet />
       </main>
       <Footer />
