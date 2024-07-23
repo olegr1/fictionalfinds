@@ -1,6 +1,6 @@
-# About this demo (WORK IN PROGRESS!)
+# About this demo (work in progress)
 
-For practice sake I’m building a fictional online store in React using a public dummy REST API from [https://dummyjson.com/docs/products](https://dummyjson.com/docs/products) whenever I have free time.
+For practice's sake I’m building a fictional online store in React using a public dummy REST API from [https://dummyjson.com/docs/products](https://dummyjson.com/docs/products) whenever I have free time.
 
 ### Some of its features I want to implement:
 
