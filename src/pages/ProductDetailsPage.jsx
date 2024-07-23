@@ -1,5 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useProductDetails } from "../hooks/useProductDetails";
+import Loading from "../components/Loading";
+import Error from "../components/Error";
 
 function ProductDetailsPage() {
   const { id } = useParams();
@@ -7,11 +9,11 @@ function ProductDetailsPage() {
   const { data, error, isLoading } = useProductDetails(id);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loading text={"Loading product details..."} />;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <Error text={error.message} />;
   }
 
   return (

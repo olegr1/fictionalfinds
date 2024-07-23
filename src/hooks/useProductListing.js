@@ -14,7 +14,7 @@ export function useProductListing(
     queryFn: () =>
       axios
         .get(
-          `${config.API_BASE_URL}/products/category/${category}?limit=${itemsPerPage}&skip=${skip}`
+          `${config.API_BASE_URL}/products/category/${category}?limit=${itemsPerPage}&skip=${skip}&delay=500`
         )
         .then((res) => res.data),
   });

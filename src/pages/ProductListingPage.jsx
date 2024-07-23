@@ -4,6 +4,8 @@ import PaginationFilters from "../components/PaginationFilters";
 import ProductFilters from "../components/ProductFilters";
 import ProductTile from "../components/ProductTile";
 import config from "../config.json";
+import Loading from "../components/Loading";
+import Error from "../components/Error";
 
 function ProductListingPage() {
   const { category } = useParams();
@@ -21,11 +23,11 @@ function ProductListingPage() {
   );
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loading text={"Loading products..."} />;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <Error text={error.message} />;
   }
 
   return (

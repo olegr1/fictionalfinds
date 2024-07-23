@@ -1,5 +1,6 @@
 import { Link, useSearchParams } from "react-router-dom";
 import config from "../config.json";
+import { useEffect } from "react";
 
 function PaginationFilters({ data, category }) {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -10,7 +11,19 @@ function PaginationFilters({ data, category }) {
 
   const pagesCount = Math.ceil(data.total / itemsPerPage);
 
-  //const paginationLink =
+  useEffect(() => {
+    if (!searchParams.get("itemsPerPage") || !searchParams.get("currentPage")) {
+      if (!searchParams.get("itemsPerPage")) {
+        searchParams.set("itemsPerPage", config.PRODUCTS_PER_PAGE);
+      }
+
+      if (!searchParams.get("currentPage")) {
+        searchParams.set("currentPage", 1);
+      }
+
+      setSearchParams(searchParams);
+    }
+  }, [searchParams, setSearchParams]);
 
   return (
     <div className="product-pagination-filters">
@@ -36,7 +49,7 @@ function PaginationFilters({ data, category }) {
         <nav aria-label="pagination" className="product-pagination">
           <ul>
             {[...Array(pagesCount)].map((_, i) => {
-              console.log(i + 1, Number);
+              //console.log(i + 1, Number);
 
               return (
                 <li key={i}>

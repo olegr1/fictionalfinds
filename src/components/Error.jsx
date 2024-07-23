@@ -1,18 +1,18 @@
-import Icon from "../components/Icon";
+import Icon from "./Icon";
 
-function PageNotFound() {
+function Error({ text }) {
   return (
     <div className="error">
       <div className="container">
         <div className="error-content">
           <div className="error-icon-wrap">
-            <Icon name={"not-found"} />
+            <Icon name={"error"} />
           </div>
-          <p className="error-text">Page not found</p>
+          <p className="error-text">{text}</p>
         </div>
       </div>
     </div>
   );
 }
 
-export default PageNotFound;
+export default Error;

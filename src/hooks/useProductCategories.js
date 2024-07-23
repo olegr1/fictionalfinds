@@ -7,7 +7,7 @@ export function useProductCategories() {
     queryKey: ["categories"],
     queryFn: () =>
       axios
-        .get(`${config.API_BASE_URL}/products/categories`)
+        .get(`${config.API_BASE_URL}/products/categories?delay=1000`)
         .then((res) => res.data),
   });
 
